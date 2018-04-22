@@ -1,4 +1,4 @@
-(ns count-nucleotides.core
+(ns dna.core
   (:gen-class))
 
 (defn count-nucleotides

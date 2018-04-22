@@ -1,4 +1,4 @@
-# count-nucleotides
+# rna
 
 FIXME: description
 
@@ -10,7 +10,7 @@ Download from http://example.com/FIXME.
 
 FIXME: explanation
 
-    $ java -jar count-nucleotides-0.1.0-standalone.jar [args]
+    $ java -jar rna-0.1.0-standalone.jar [args]
 
 ## Options
 

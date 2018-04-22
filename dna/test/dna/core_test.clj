@@ -1,6 +1,6 @@
-(ns count-nucleotides.core-test
+(ns dna.core-test
   (:require [clojure.test :refer :all]
-            [count-nucleotides.core :refer :all]))
+            [dna.core :refer :all]))
 
 (deftest a-test
   (testing "FIXME, I fail."
