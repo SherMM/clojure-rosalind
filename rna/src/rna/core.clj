@@ -4,17 +4,14 @@
 
 (defn transcribe
 	[nucleotide]
-	(if (= nucleotide "T")
-		"U"
-		nucleotide))
+	(let [nuc (str nucleotide)]
+		(if (= nuc "T")
+			"U"
+			nuc)))
 
 (defn transcribe-to-rna
-	([dna]
-		(transcribe-to-rna dna ""))
-	([dna rna]
-		(if (empty? dna)
-			rna
-			(recur (subs dna 1) (str rna (transcribe (subs dna 0 1)))))))
+	[dna]
+	(apply str (map transcribe dna)))
 
 (defn -main
   "I don't do a whole lot ... yet."
