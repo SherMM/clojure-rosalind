@@ -3,15 +3,11 @@
 
 (defn get-comp
 	[nucleotide]
-	(get  {:A "T" :T "A" :C "G" :G "C"} (keyword nucleotide)))
+	(get  {:A "T" :T "A" :C "G" :G "C"} (keyword (str nucleotide))))
 
 (defn complement-dna
-	([dna]
-		(complement-dna dna ""))
-	([dna strand]
-		(if (empty? dna)
-			(clojure.string/join "" (reverse strand))
-			(recur (subs dna 1) (str strand (get-comp (subs dna 0 1)))))))
+	[dna]
+	(apply str (reverse (map get-comp dna))))
 
 (defn -main
   "I don't do a whole lot ... yet."
