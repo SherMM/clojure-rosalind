@@ -29,8 +29,9 @@
 
 (defn translate-rna-to-protein
 	[rna]
-	(str/join (take-while #(not (= "" %)) (map translate-codon-to-acid 
-		(map str/join (partition 3 rna))))))
+	(str/join (take-while #(not (= "" %)) 
+		(map translate-codon-to-acid 
+			(map str/join (partition 3 rna))))))
 
 (defn -main
   "I don't do a whole lot ... yet."
